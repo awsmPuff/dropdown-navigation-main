@@ -35,7 +35,7 @@ Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to t
 ### Links
 
 - Solution URL: [https://www.frontendmentor.io/profile/awsmPuff/solutions]
-- Live Site URL: [Add live site URL here]
+- Live Site URL: [https://awsmpuff.github.io/dropdown-navigation-main/]
 
 
 ### Built with
