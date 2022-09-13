@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; position: absolute; margin: auto; left: 0; right: 0; bottom: 10px;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body onload="init()">
+  <nav>
+    <img class="logo" src="./images/logo.svg" alt="snap">
+
+    <div class="menu">
+      <ul>
+        <div class="menu-1">
+          <li class="features-link">Features<div class="fe-dropdown drop-down"></div></li>
+            <ul class="first-menu dropdown">
+              <li><img src="./images/icon-todo.svg">Todo List</li>
+              <li><img src="./images/icon-calendar.svg">Calendar</li>
+              <li><img src="./images/icon-reminders.svg">Reminders</li>
+              <li><img src="./images/icon-planning.svg">Planning</li>
+            </ul>
+        </div>
+        <div class="menu-2">
+          <li class="company-link">Company<div class="co-dropdown drop-down"></div></li>
+            <ul class="second-menu dropdown">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+        </div>
+        <li class="careers">Careers</li>
+        <li class="about">About</li>
+      </ul>
+    </div>
+
+    <div class="connect">
+      <button class="log-in">Login</button>
+      <button class="register">Register</button>
+    </div>
+  </nav>
+ <div class="nav-bar">
+  <img class="logo" src="./images/logo.svg" alt="snap">
+  <div class="toggle-menu">
+    <div class="toggle-btn toggle-close"></div>
+    <div class="toggle-list">
+      <ul>
+        <li>Features<div class="fe-toggle drop-down close"></div></li>
+        <ul class="fe-menu">
+          <li><img src="./images/icon-todo.svg">Todo List</li>
+          <li><img src="./images/icon-calendar.svg">Calendar</li>
+          <li><img src="./images/icon-reminders.svg">Reminders</li>
+          <li><img src="./images/icon-planning.svg">Planning</li>
+        </ul>
+        <li>Company<div class="co-toggle drop-down close"></div></li>
+        <ul class="co-menu">
+          <li>History</li>
+          <li>Our Team</li>
+          <li>Blog</li>
+        </ul>
+        <li>Careers</li>
+        <li>About</li>
+      </ul>
+      <div class="btns">
+        <button class="toggle-login">Login</button>
+        <button>Register</button>
+      </div>
+    </div>
+  </div>
+ </div>
+
+  <main>
+    <div class="content">
+      <h1 class="title">Make remote work</h1>
+      <p>
+        Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.
+      </p>
+      <button>Learn more</button>
+      <div class="clients">
+        <img src="./images/client-databiz.svg" alt="databiz">
+        <img src="./images/client-audiophile.svg" alt="audiophile">
+        <img src="./images/client-meet.svg" alt="meet">
+        <img src="./images/client-maker.svg" alt="maker">
+      </div>
+    </div>
+    <div class="illustration"></div>
+  </main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Laurenxx</a>.
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

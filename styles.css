@@ -1,0 +1,360 @@
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    color: var(--medium-gray);
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 500;
+    background-color: var(--almost-white);
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.nav-bar {
+    display: none;
+}
+
+nav {
+    position: relative;
+    height: 50px;
+    display: flex;
+    padding: 20px 35px;
+    align-items: center;
+}
+
+.dropdown {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: var(--almost-white);
+    cursor: pointer;
+    padding-left: 0;
+    top: 60px;
+    box-shadow: 2px 2px 25px 3px rgba(143, 143, 143, 0.3);
+}
+
+.dropdown li {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+}
+.dropdown li img {
+    margin-right: 10px;
+}
+.first-menu {
+    left: 195px;
+    display: none;
+    
+}
+.second-menu {
+    left: 375px;
+    display: none;
+    z-index: 100;
+}
+
+.logo {
+    width: 100px;
+    height: 32px;
+}
+
+.menu {
+    margin-left: 70px;
+    cursor: pointer;
+}
+
+.menu ul li:hover {
+    color: var(--almost-black);
+    transition: 0.3s ease-in-out;
+}
+
+.menu ul li {
+    display: flex;
+    align-items: center;
+}
+.drop-down {
+    margin-left: 10px;
+    background: url(./images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+}
+
+.menu ul li:hover .drop-down {
+    filter: invert(0%) sepia(23%) saturate(6231%) hue-rotate(91deg) brightness(0%) contrast(84%);
+}
+
+.menu-1:hover .fe-dropdown {
+    background: url(./images/icon-arrow-up.svg);
+    background-repeat: no-repeat;
+}
+.menu-2:hover .co-dropdown {
+    background: url(./images/icon-arrow-up.svg);
+    background-repeat: no-repeat;
+}
+.menu-1,
+.menu-2 {
+    margin-top: 27px;
+    height: 50px;
+}
+div.menu-1:hover .first-menu {
+    display: block;
+    z-index: 100;
+}
+div.menu-2:hover .second-menu {
+    display: block;
+    z-index: 100;
+}
+.first-menu li:hover {
+    background-color: rgba(234, 234, 234, 0.859);
+}
+.second-menu li:hover {
+    background-color: rgba(234, 234, 234, 0.859);
+}
+.connect {
+    position: absolute;
+    right: 35px;
+}
+
+.connect button {
+    font-size: 18px;
+    font-family: 'Epilogue', sans-serif;
+    background: none;
+    border: 2px solid var(--medium-gray);
+    color: var(--medium-gray);
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+.connect button:hover {
+    color: var(--almost-black);
+    border: 2px solid var(--almost-black);
+    transition: 0.3s ease-in-out;
+}
+
+.connect button.log-in {
+    border: none;
+    margin-right: 20px;
+}
+
+main {
+    display: flex;
+}
+
+.content {
+    margin: 30px 150px 70px 200px;
+    width: 480px;
+    height: 570px;
+    position: relative;
+}
+
+.content h1 {
+    color: var(--almost-black);
+    font-size: 72px;
+    font-weight: 700;
+    margin:100px auto 40px;
+
+}
+
+.content p {
+    line-height: 1.5;
+}
+
+.content button {
+    width: 150px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: var(--almost-white);
+    padding: 20px;
+    font-size: 18px;
+    font-family: 'Epilogue', sans-serif;
+    border-radius: 15px;
+    border: solid 2px var(--almost-black);
+    background-color: var(--almost-black);
+    margin-top: 40px;
+}
+.content button:hover {
+    color: var(--almost-black);
+    background-color: var(--almost-white);
+    transition: 0.3s ease-in-out;
+}
+
+.content .clients {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+.content .clients img {
+    margin-right: 20px;
+}
+
+.illustration {
+    background: url(./images/image-hero-desktop.png);
+    width: 530px;
+    height: 600px;
+    background-size: cover;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        overflow-x: hidden;
+    }
+    nav {
+        display: none;
+    }
+    .nav-bar {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 15px 20px;
+    }
+    .nav-bar .logo {
+        width: 80px;
+        height: 25px;
+    }
+    .toggle-btn {
+        z-index: 2;
+        width: 35px;
+        height: 25px;
+        transition: 0.1s ease-in;
+        cursor: pointer;
+    }
+    .toggle-open {
+        background: url(./images/icon-close-menu.svg);
+        background-repeat: no-repeat;
+    }
+    .toggle-close {
+        background: url(./images/icon-menu.svg);
+        background-repeat: no-repeat;
+    }
+    .toggle-list {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        height: 100%;
+        width: 60%;
+        background-color: var(--almost-white);
+        font-size: 16px;
+        transform: translateX(105%);
+        transition: transform 0.4s ease-in;
+        cursor: pointer;
+    }
+    .toggle-list ul {
+        margin-top: 20px;
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 30px;
+    }
+    .toggle-list ul li {
+        width: 120px;
+        display: flex;
+        align-items: center;
+    }
+    .toggle-list ul li .drop-down {
+        z-index: 5;
+    }
+    ul.fe-menu, 
+    ul.co-menu {
+        margin-top: 0;
+        margin-bottom: -10px;
+        padding: 0 15px;
+        display: none;
+    }
+    ul.fe-menu li, 
+    ul.co-menu li {
+        margin-bottom: 20px;
+    }
+    .fe-menu li img {
+        margin-right: 10px;
+    }
+    .open {
+        background: url(./images/icon-arrow-up.svg);
+        background-repeat: no-repeat;
+    }
+    .close {
+        background: url(./images/icon-arrow-down.svg);
+        background-repeat: no-repeat;
+    }
+    .toggle-list .btns {
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+        gap: 10px;
+    }
+    .toggle-list .btns button {
+        color: var(--medium-gray);
+        font-family: 'Epilogue', sans-serif;
+        height: 40px;
+        padding: 6px;
+        border: 2px solid var(--medium-gray);
+        background: none;
+        border-radius: 10px;
+    }
+    .toggle-list .btns .toggle-login {
+        border: none;
+    }
+    main {
+        flex-direction: column-reverse;
+    }
+    
+    .illustration {
+        background: url(./images/image-hero-mobile.png);
+        width: 100%;
+        height: 285px;
+        background-size: cover;
+    }
+    .content {
+        margin: 0 auto;
+        width: 330px;
+        height: 350px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content h1 {
+        font-size: 30px;
+        margin-top: 40px;
+        margin-bottom: 5px;
+    }
+    .content p {
+        font-size: 15px;
+        margin-bottom: -10px;
+
+    }
+    .content button {
+        font-size: 15px;
+        margin-top: 30px;
+        width: 130px;
+        padding: 20px 10px;
+        justify-content: center;
+        height: 20px;
+        border-radius: 10px;
+    }
+    .content .clients img {
+        margin-right: 15px;
+        width: 70px;
+    }
+    .attribution {
+        bottom: 10px;
+    }
+}
